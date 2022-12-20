@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+*
+{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Varela Round', sans-serif;
+}
+body
+{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   min-height: 100vh;
+   background-color: black;
+}
+section
+{
+   position: absolute;
+   width: 100vw;
+   height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   user-select: none;
+   gap: 2px;
+   flex-wrap: wrap;
+   overflow: hidden;
+}
+section::before
+{
+   content: '';
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   background: linear-gradient(black,rgb(0, 255, 0),black);
+   animation: animate 3s linear infinite;
+}
+@keyframes animate 
+{
+   0%
+   {
+      transform: translateY(-100%);
+   }   
+   100%
+   {
+      transform: translateY(100%);
+   }
+}
+section span
+{
+   position: relative;
+   display: block;
+   width: calc(6.25vw - 2px);
+   height: calc(6.25vw - 2px);
+   background: rgb(25, 25, 25);
+   z-index: 2px;
+   opacity: 0.9;
+}
+/*section span:hover
+{
+   background: rgb(0, 255, 0);
+   transition: 1s;
+}*/
+section .signin
+{
+   position: absolute;
+   width: 420px;
+   background-color: rgb(40, 40, 40);
+   z-index: 1000;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding: 40px;
+   border-radius: 9px;
+   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+}
+section .signin .content
+{
+   position: relative;
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   gap: 40px;
+}
+section .signin .greenboxs .greenbox
+{
+   position: absolute;
+   width: 22px;
+   height: 100%;
+   right: 0;
+   top: 0;
+   background:linear-gradient(to right, rgba(0, 255, 0, 0.35) ,rgb(0, 255, 0));
+   border-radius: 0 10px 10px 0;
+}
+section .signin .greenboxs .greenbox:nth-child(2)
+{
+   position: absolute;
+   width: 22px;
+   height: 100%;
+   left: 0;
+   top: 0;
+   background:linear-gradient(to left, rgba(0, 255, 0, 0.35) ,rgb(0, 255, 0));
+   border-radius: 10px 0 0 10px;
+}
+section .signin .content h2
+{
+   font-size: 2em;
+   color: rgb(0, 255, 0);
+   text-transform: uppercase; /*Yazıları büyükleştirir*/
+}
+section .signin .content .form
+{
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   gap: 25px;
+}
+section .signin .content .form .inputBx
+{
+   position: relative;
+   width: 100%;
+}
+section .signin .content .form .inputBx input
+{
+   position: relative;
+   width: 100%;
+   background-color: rgb(60, 60, 60);
+   border-radius: 5px;
+   border: none;
+   outline: none;
+   padding: 25px 10px 5px;
+   color: white;
+   font-weight: 500;
+   font-size: 1em;
+}
+section .signin .content .form .inputBx i
+{
+   position: absolute;
+   left: 0;
+   padding: 15px 10px;
+   font-style: normal;
+   color: rgb(161, 161, 161);
+   transition: 0.15s;
+   pointer-events: none; 
+}
+section .signin .content .form .inputBx input:focus ~ i,
+section .signin .content .form .inputBx input:valid ~ i
+{
+   font-weight: normal;
+   transform: translateY(-7.5px);
+   font-size: 0.8em;
+   transition: 0.3s;
+}
+section .signin .content .form .links
+{
+   position: relative;
+   width: 100%;
+   display: flex;
+   justify-content: space-between;
+   transition: 0.5s;
+}
+section .signin .content .form .links a
+{
+   color: white;
+   text-decoration: none;
+}
+section .signin .content .form .links a::after
+{
+   content: '';
+   display: block;
+   margin: auto;
+   margin-top: 1px;
+   width: 0;
+   height: 3px;
+   background-color: white;
+   border-radius: 50px;
+   transition: 0.35s;
+}
+section .signin .content .form .links a:hover::after
+{
+   content: '';
+   margin: auto;
+   margin-top: 1px;
+   width: 98%;
+   height: 3px;
+   background-color: white;
+   border-radius: 50px;
+   transition: 0.35s;
+}
+section .signin .content .form .links a:nth-child(2)
+{
+   color: rgb(0, 255, 0);
+   font-weight: 600;
+}
+section .signin .content .form .links a:nth-child(2):after
+{
+   content: '';
+   display: block;
+   margin: auto;
+   margin-top: 1px;
+   width: 0;
+   height: 3px;
+   background-color: rgb(0, 255, 0);
+   border-radius: 50px;
+   transition: 0.35s;
+}
+section .signin .content .form .links a:nth-child(2)::after
+{
+   content: '';
+   display: block;
+   margin: auto;
+   margin-top: 1px;
+   width: 0;
+   height: 3px;
+   background-color: rgb(0, 255, 0);
+   border-radius: 50px;
+   transition: 0.35s;
+}
+section .signin .content .form .links a:nth-child(2):hover::after
+{
+   content: '';
+   display: block;
+   margin: auto;
+   margin-top: 1px;
+   width: 98%;
+   height: 3px;
+   background-color: rgb(0, 255, 0);
+   border-radius: 50px;
+   transition: 0.35s;
+}
+section .signin .content .form .inputBx input[type="submit"]
+{
+   margin-top: 10px;
+   padding: 10px;
+   background-color: rgb(0, 255, 0);
+   color: rgb(40, 40, 40);
+   font-weight: 600;
+   font-size: 1.3em;
+   cursor: pointer;
+   transition: 0.5s;
+}
+section .signin .content .form .inputBx input[type="submit"]:hover
+{
+   background-color: rgb(80, 80, 80);
+   color: rgb(0, 255, 0);;
+   transition: 0.5s;
+}
+@media(max-width:1480px)
+{
+   section span
+   {
+      width: calc(10vw - 2px);
+      height: calc(10vw - 2px);
+   }
+}
+@media(max-width:600px)
+{
+   section span
+   {
+      width: calc(20vw - 2px);
+      height: calc(20vw - 2px);
+   }
+}
+@media(max-width:350px)
+{
+   section span
+   {
+      width: calc(25vw - 2px);
+      height: calc(25vw - 2px);
+   }
+}
